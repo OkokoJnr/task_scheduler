@@ -19,7 +19,13 @@ class TaskSchedule:
             return
         self.tail.next = task
         self.tail = task
-
+    def display(self):
+        if self.head is None:
+            return "No Task available"
+        task = self.head
+        while task is not None:
+            print(f"{task.id} - {task.task}")
+            task = task.next
 
 
 
